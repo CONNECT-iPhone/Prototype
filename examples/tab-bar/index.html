@@ -1,67 +1,142 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>My App</title>
-    <!-- Path to Framework7 Library CSS-->
-    <link rel="stylesheet" href="../../dist/css/framework7.ios.min.css">
-    <!-- Path to your custom app styles-->
-    <link rel="stylesheet" href="css/my-app.css">
-  </head>
-  <body>
-    <!-- Status bar overlay for fullscreen mode-->
-    <div class="statusbar-overlay"></div>
-    <!-- Panels overlay-->
-    <div class="panel-overlay"></div>
-    <!-- Left panel with reveal effect-->
-    <div class="panel panel-left panel-reveal">
-      <div class="content-block">
-        <p>Left panel content goes here</p>
-      </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>My App</title>
+  <!-- Path to Framework7 Library CSS-->
+  <link rel="stylesheet" href="../../dist/css/framework7.ios.min.css">
+  <!-- Path to your custom app styles-->
+  <link rel="stylesheet" href="css/my-app.css">
+</head>
+<body>
+  <!-- Status bar overlay for fullscreen mode-->
+  <div class="statusbar-overlay"></div>
+  <!-- Panels overlay-->
+  <div class="panel-overlay"></div>
+  <!-- Left panel with reveal effect-->
+  <div class="panel panel-left panel-reveal">
+    <div class="content-block">
+      <p>Left panel content goes here</p>
     </div>
-    <!-- Right panel with cover effect-->
-    <div class="panel panel-right panel-cover">
-      <div class="content-block">
-        <p>Right panel content goes here</p>
-      </div>
+  </div>
+  <!-- Right panel with cover effect-->
+  <div class="panel panel-right panel-cover">
+    <div class="content-block">
+      <p>Right panel content goes here</p>
     </div>
-    <!-- Views, and they are tabs-->
-    <!-- We need to set "toolbar-through" class on it to keep space for our tab bar-->
-    <div class="views tabs toolbar-through">
-      <!-- Your first view, it is also a .tab and should have "active" class to make it visible by default-->
-      <div id="view-1" class="view view-main tab active">
-        <!-- Pages-->
-        <div class="pages">
-          <!-- Page, data-page contains page name-->
-          <div data-page="index-1" class="page">
-            <!-- Scrollable page content-->
-            <div class="page-content">
-              <div class="content-block-title">Welcome</div>
-              <div class="content-block">
-                <p>This is an example of tab bar application layout. The main point of such tabbed layout is that each tab contains independent view with its own routing and navigation.</p>
-                <p>Each tab/view may have different layout, different navbar type (dynamic, fixed or static) or without navbar like this tab.</p>
-                <p>And of course, your favorite panels are still here: <a href="#" class="open-panel">left</a> and  <a href="#" data-panel="right" class="open-panel">right</a></p>
-                <p>Icons and their labels in tab bar below are just for example and don't related to their content.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Second view (for second wrap)-->
-      <div id="view-2" class="view tab">
-        <!-- We can make with view with navigation, let's add Top Navbar-->
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="center sliding">Second View</div>
-          </div>
-        </div>
-        <div class="pages navbar-through">
-          <div data-page="index-2" class="page">
-            <div class="page-content">
-              <div class="content-block">
+  </div>
+  <!-- Views, and they are tabs-->
+  <!-- We need to set "toolbar-through" class on it to keep space for our tab bar-->
+  <div class="views tabs toolbar-through">
+    <!-- Your first view, it is also a .tab and should have "active" class to make it visible by default-->
+    
+
+
+
+
+        <!--<div class="toolbar-inner">
+          
+          <a href="#view-tts" class="tab-link"> <i class="icon tabbar-demo-icon-3"><span class="badge bg-red">4</span></i><span class="tabbar-label">Speech to Text</span></a>
+
+          <a href="#view-stt" class="tab-link"><i class="icon tabbar-demo-icon-2"></i><span class="tabbar-label">Speech to Text</span></a>
+
+          <!--<a href="#view-4" class="tab-link"> <i class="icon tabbar-demo-icon-4"></i><span class="tabbar-label">Photos</span></a></div>-->
+
+
+
+
+          <div id="view-stt" class="view tab">
+
+            <div class="pages navbar-through">
+              <!-- Page, data-page contains page name-->
+              <div data-page="index-1" class="page with-subnavbar">
+
+                <div class="navbar">
+                  <div class="navbar-inner">
+                    <div class="left"><a href="#settings" class="tab-link"><!--<i class="icon tabbar-demo-icon-2"></i>--><span class="tabbar-label">Settings</span></a></div>
+                    <div class="center">Connect iOS</div>
+
+                    <!-- Sub navbar -->
+                    <div class="subnavbar">
+                      <div class="buttons-row">
+                        <a href="#view-tts" class="button tab-link">Text to Speech</a>
+                        <a href="#view-stt" class="button tab-link">Speech To Text</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <div class="page-content">
+
+                  <div class="page toolbar-fixed">
+                    <div class="page-content messages-content">
+                      <div class="messages">
+                        <div class="messages-date">Sunday, Feb 9 <span>8:29</span></div>
+                        <div class="message message-received">
+                          <div class="message-name">Alice</div>
+                          <div class="message-text">Can I order the steak and egg omelette?</div>
+                        </div>
+                        <div class="message message-sent">
+                          <div class="message-name">Alice</div>
+                          <div class="message-text">We're out of steak unfortunately, we do have chicken left though</div>
+                        </div>
+                        <div class="message message-received">
+                          <div class="message-name">Alice</div>
+                          <div class="message-text">That will be fine</div>
+                        </div>
+                        <div class="messages-date">Sunday, Feb 11 <span>11:58</span></div>
+                        <div class="message message-received">
+                          <div class="message-name">Alice</div>
+                          <div class="message-text">Can I hand you my phone so you can use the speech to text functionality?</div>
+                        </div>
+                        <div class="message message-sent">
+                          <div class="message-name">Typed Message</div>
+                          <div class="message-text">Hello, my name is Sidney</div>
+                        </div>
+                        <div class="message message-sent">
+                          <div class="message-text">What can I help you with?</div>
+                        </div>
+                        <div class="message message-received">
+                          <div class="message-name">Alice</div>
+                          <div class="message-text">Can you help me find cat food?</div>
+                        </div>
+
+                        <div class="messages-date">Sunday, Feb 11 <span>3:17</span></div>
+                        <div class="message message-sent">
+                          <div class="message-name">Typed Message</div>
+                          <div class="message-text">Of course!!</div>
+                        </div>
+                        <div class="message message-received">
+                          <div class="message-name">Alice</div>
+                          <div class="message-text">Thank you so much!</div>
+                        </div>
+                        <div class="message message-sent">
+                          <div class="message-name">Typed Message</div>
+                          <div class="message-text">Hey Alice!</div>
+                        </div>
+                        <div class="message message-sent">
+                          <div class="message-name"> .</div>
+                          <div class="message-name"> .</div>
+                          <div class="message-name"> .</div>
+                        </div>
+
+                        <div class="toolbar messagebar">
+                          <div class="toolbar-inner">
+                            <textarea placeholder="Message"></textarea>
+                            <a href="#" class="link">Send</a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+              <!--<div class="content-block">
                 <p>This is a second view. Lets, for example, have here some internal pages with navbar navigation</p>
               </div>
               <div class="list-block">
@@ -79,43 +154,166 @@
                         </div>
                       </div></a></li>
                 </ul>
-              </div>
+              </div>-->
             </div>
           </div>
         </div>
       </div>
-      <div id="view-3" class="view tab">
-        <div class="pages">
-          <div data-page="index-3" class="page">
+
+
+
+      <div id="view-tts" class="view view-main tab active">
+
+        <div class="pages navbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index-1" class="page with-subnavbar">
+
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="left"><a href="#settings" class="tab-link"><!--<i class="icon tabbar-demo-icon-2"></i>--><span class="tabbar-label">Settings</span></a></div>
+                <div class="center">Connect iOS</div>
+
+                <!-- Sub navbar -->
+                <div class="subnavbar">
+                  <div class="buttons-row">
+                    <a href="#view-tts" class="button tab-link">Text to Speech</a>
+                    <a href="#view-stt" class="button tab-link">Speech To Text</a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
             <div class="page-content">
-              <div class="content-block-title">Another plain static view</div>
-              <div class="content-block">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel commodo massa, eu adipiscing mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus ultricies dictum neque, non varius tortor fermentum at. Curabitur auctor cursus imperdiet. Nam molestie nisi nec est lacinia volutpat in a purus. Maecenas consectetur condimentum viverra. Donec ultricies nec sem vel condimentum. Phasellus eu tincidunt enim, sit amet convallis orci. Vestibulum quis fringilla dolor.    </p>
-                <p>Mauris commodo lacus at nisl lacinia, nec facilisis erat rhoncus. Sed eget pharetra nunc. Aenean vitae vehicula massa, sed sagittis ante. Quisque luctus nec velit dictum convallis. Nulla facilisi. Ut sed erat nisi. Donec non dolor massa. Mauris malesuada dolor velit, in suscipit leo consectetur vitae. Duis tempus ligula non eros pretium condimentum. Cras sed dolor odio.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel commodo massa, eu adipiscing mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus ultricies dictum neque, non varius tortor fermentum at. Curabitur auctor cursus imperdiet. Nam molestie nisi nec est lacinia volutpat in a purus. Maecenas consectetur condimentum viverra. Donec ultricies nec sem vel condimentum. Phasellus eu tincidunt enim, sit amet convallis orci. Vestibulum quis fringilla dolor.    </p>
+              <div class="content-block-title">Typed Message</div>
+
+              <div class="list-block">
+                <ul>
+
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-input">
+                        <input type="text" name="name" placeholder="What do you want to say?">
+
+                      </div>
+                    </div>
+                  </li>
+
+                </ul>
               </div>
-            </div>
-          </div>
+
+
+
+<div class="content-block-title">Quick Responses</div>
+        <div class="list-block">
+          <ul>
+            <li class="item-content">
+              <div class="item-inner">
+                <div class="item-title">"That's good"</div>
+              </div>
+            </li>
+            <li class="item-content">
+              <div class="item-inner">
+                <div class="item-title">"That's no good"</div>
+              </div>
+            </li>
+            <li class="item-content">
+              <div class="item-inner">
+                <div class="item-title">"Awesome</div>
+              </div>
+            </li>
+            <li class="item-content">
+              <div class="item-inner">
+                <div class="item-title">"Thanks"</div>
+              </div>
+            </li>
+            <li class="item-content">
+              <div class="item-inner">
+                <div class="item-title">"No Thanks"</div>
+              </div>
+            </li>
+            <li class="item-content">
+              <div class="item-inner">
+                <div class="item-title">"You're welcome"</div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-      <div id="view-4" class="view tab">
+
+
+            </div>
+
+
+          </div>
+        </div>
+
+
+
+
+      <div id="settings" class="view tab">
         <div class="pages navbar-fixed">
           <div data-page="index-4" class="page">
             <div class="navbar">
               <div class="navbar-inner">
-                <div class="center">Settings</div>
+                <div class="left"><a href="#view-tts" class="tab-link"><!--<i class="icon tabbar-demo-icon-2"></i>--><span class="tabbar-label">< Back</span></a></div>
+                <div class="center">Connect iOS</div>
+                <!-- Sub navbar -->
+
               </div>
             </div>
+
             <div class="page-content">
+
               <div class="list-block">
                 <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Module Settings</div>
+                        
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-url"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title">Import Module</div>
+                        
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-settings"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title ">Add Module</div>
+                        
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title">General Settings</div>
+                        
+                      </div>
+                    </div>
+                  </li>
                   <li>
                     <div class="item-content">
                       <div class="item-media"><i class="icon icon-form-name"></i></div>
                       <div class="item-inner"> 
                         <div class="item-title label">Name</div>
                         <div class="item-input">
-                          <input type="text" placeholder="Your name">
+                          <input type="text" placeholder="Alice">
                         </div>
                       </div>
                     </div>
@@ -133,28 +331,6 @@
                   </li>
                   <li>
                     <div class="item-content">
-                      <div class="item-media"><i class="icon icon-form-url"></i></div>
-                      <div class="item-inner"> 
-                        <div class="item-title label">URL</div>
-                        <div class="item-input">
-                          <input type="url" placeholder="URL">
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="item-content">
-                      <div class="item-media"><i class="icon icon-form-password"></i></div>
-                      <div class="item-inner"> 
-                        <div class="item-title label">Password</div>
-                        <div class="item-input">
-                          <input type="password" placeholder="Password">
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="item-content">
                       <div class="item-media"><i class="icon icon-form-tel"></i></div>
                       <div class="item-inner"> 
                         <div class="item-title label">Phone</div>
@@ -164,11 +340,26 @@
                       </div>
                     </div>
                   </li>
+                  
+                  
+                </ul>
+              </div>
+
+              <div class="list-block">
+                <ul>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-inner"> 
+                        <div class="item-title label">Voice Settings</div>
+                        
+                      </div>
+                    </div>
+                  </li>
                   <li>
                     <div class="item-content">
                       <div class="item-media"><i class="icon icon-form-gender"></i></div>
                       <div class="item-inner"> 
-                        <div class="item-title label">Gender</div>
+                        <div class="item-title label">Voice Gender</div>
                         <div class="item-input">
                           <select>
                             <option>Male</option>
@@ -180,34 +371,9 @@
                   </li>
                   <li>
                     <div class="item-content">
-                      <div class="item-media"><i class="icon icon-form-calendar"></i></div>
-                      <div class="item-inner"> 
-                        <div class="item-title label">Birth date</div>
-                        <div class="item-input">
-                          <input type="date" placeholder="Birth day" value="2014-04-30">
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="item-content">
-                      <div class="item-media"><i class="icon icon-form-toggle"></i></div>
-                      <div class="item-inner"> 
-                        <div class="item-title label">Switch</div>
-                        <div class="item-input">
-                          <label class="label-switch">
-                            <input type="checkbox">
-                            <div class="checkbox"></div>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="item-content">
                       <div class="item-media"><i class="icon icon-form-settings"></i></div>
                       <div class="item-inner">
-                        <div class="item-title label">Slider</div>
+                        <div class="item-title label">Voice Pitch</div>
                         <div class="item-input">
                           <div class="range-slider">
                             <input type="range" min="0" max="100" value="50" step="0.1">
@@ -216,23 +382,67 @@
                       </div>
                     </div>
                   </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-settings"></i></div>
+                      <div class="item-inner">
+                        <div class="item-title label">Voice Speed</div>
+                        <div class="item-input">
+                          <div class="range-slider">
+                            <input type="range" min="0" max="100" value="50" step="0.1">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="item-content">
+                      <div class="item-media"><i class="icon icon-form-url"></i></div>
+                      <div class="item-inner"> 
+                        <div class="item-title label">Language</div>
+                        <div class="item-input">
+                          <select>
+                            <option>English (US)</option>
+                            <option>English (UK)</option>
+                            <option>French</option>
+                            <option>Japanese</option>
+                            <option>Chinese</option>
+                            <option>Spanish</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </div>
               <div class="content-block">
-                <p>Mauris commodo lacus at nisl lacinia, nec facilisis erat rhoncus. Sed eget pharetra nunc. Aenean vitae vehicula massa, sed sagittis ante. Quisque luctus nec velit dictum convallis. Nulla facilisi. Ut sed erat nisi. Donec non dolor massa. Mauris malesuada dolor velit, in suscipit leo consectetur vitae. Duis tempus ligula non eros pretium condimentum. Cras sed dolor odio.</p>
+                <p>Connect iOS App prototype built with love by Casey Bennett, Tina Ho, Youseff Hammoud, Zurie Mai and Sidney Durant for the CS3311/LMC3432 final presentation at Georgia Institute of Technology.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Bottom Tabbar-->
-      <div class="toolbar tabbar tabbar-labels">
-        <div class="toolbar-inner"><a href="#view-1" class="tab-link active"> <i class="icon tabbar-demo-icon-1"></i><span class="tabbar-label">Information</span></a><a href="#view-2" class="tab-link"><i class="icon tabbar-demo-icon-2"></i><span class="tabbar-label">Inbox</span></a><a href="#view-3" class="tab-link"> <i class="icon tabbar-demo-icon-3"><span class="badge bg-red">4</span></i><span class="tabbar-label">Upload</span></a><a href="#view-4" class="tab-link"> <i class="icon tabbar-demo-icon-4"></i><span class="tabbar-label">Photos</span></a></div>
+
+
+
       </div>
-    </div>
-    <!-- Path to Framework7 Library JS-->
-    <script type="text/javascript" src="../../dist/js/framework7.min.js"></script>
-    <!-- Path to your app js-->
-    <script type="text/javascript" src="js/my-app.js"></script>
-  </body>
-</html>
+
+
+      <!-- Bottom Tabbar-->
+      <!-- <div class="toolbar tabbar tabbar-labels">
+        <div class="toolbar-inner">
+          
+          <a href="#view-tts" class="tab-link"> <i class="icon tabbar-demo-icon-3"><span class="badge bg-red">4</span></i><span class="tabbar-label">Speech to Text</span></a>
+          <a href="#view-stt" class="tab-link"><i class="icon tabbar-demo-icon-2"></i><span class="tabbar-label">Speech to Text</span></a>
+          <!--<a href="#view-4" class="tab-link"> <i class="icon tabbar-demo-icon-4"></i><span class="tabbar-label">Photos</span></a></div>-->
+        <!--</div>
+      </div> -->
+
+
+
+      <!-- Path to Framework7 Library JS-->
+      <script type="text/javascript" src="../../dist/js/framework7.min.js"></script>
+      <!-- Path to your app js-->
+      <script type="text/javascript" src="js/my-app.js"></script>
+    </body>
+    </html>
